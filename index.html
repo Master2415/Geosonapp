@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <link rel="stylesheet" href="./styles.css"/>
+     
+    <title>GEOJSONAPP</title>
+</head>
+<body>
+    
+    <div id="map"></div>
+
+    <form>
+        <select id="select" class="form-select" aria-label="Mi listado de elementos">
+            <option selected disabled value="">Elegir el tipo de entidad a crear</option>
+            <option value="marker">Marcador</option>
+            <option value="circleMarker">CircleMarker</option>
+            <option value="polyline">Línea</option>
+            <option value="polygon">Polígono</option>
+        </select>
+
+        <div class="d-flex justify-content-between align-items-center mt-2">
+            <div class="form-check form-switch mr-3">
+                <input id="checkbox" type="checkbox" role="switch" class="form-check-input">
+                <label class="form-check-label" for="checkbox">Agrupado</label>
+            </div>
+
+            <button id="btn" type="button" class="btn btn-secondary float-end">Crear</button>
+        </div>
+    </form>
+
+    <div id="sidebar" class="d-flex justify-content-center align-items-center">
+        Actualmente no hay información
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+    <script src="./js/map.js"></script>
+    <script src="./js/points.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
+
